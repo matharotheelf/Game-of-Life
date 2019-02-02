@@ -1,0 +1,2 @@
+class Livecell
+end
