@@ -8,6 +8,14 @@
       "/Users/admin/tech-tests/Game-of-Life/lib/grid.rb": [
         1,
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/admin/tech-tests/Game-of-Life/lib/livecell.rb": [
@@ -20,6 +28,6 @@
         null
       ]
     },
-    "timestamp": 1549132349
+    "timestamp": 1549140875
   }
 }

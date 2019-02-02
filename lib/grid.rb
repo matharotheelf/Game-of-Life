@@ -1,3 +1,11 @@
 class Grid
-  def addlivecell; end
+  attr_reader :livecellsarray
+
+  def initialize
+    @livecellsarray = []
+  end
+
+  def addlivecell(livecell)
+    @livecellsarray.push(livecell)
+  end
 end

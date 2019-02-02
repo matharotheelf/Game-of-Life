@@ -1,10 +1,13 @@
 require 'grid'
 
 describe Grid do
+  grid = Grid.new
+
   describe '#addlivecell' do
-    it 'is defined on Grid class' do
-      grid = Grid.new
-      expect(grid).to respond_to(:addlivecell)
+    let(:livecell) { double :livecell }
+
+    it 'can add cell to grid' do
+      expect { grid.addlivecell(livecell) }.to change { grid.livecellsarray.length }.by(1)
     end
   end
 end
