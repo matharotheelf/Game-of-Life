@@ -1,3 +1,5 @@
+require_relative 'livecell.rb'
+
 class Grid
   attr_reader :livecellsarray
 
@@ -5,7 +7,11 @@ class Grid
     @livecellsarray = []
   end
 
-  def addlivecell(livecell)
+  def addlivecell(x, y, livecell = Livecell.new(x, y))
     @livecellsarray.push(livecell)
+  end
+
+  def nearestneighbournumber(_coordinate)
+    0
   end
 end
