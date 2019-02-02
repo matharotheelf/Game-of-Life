@@ -1,0 +1,25 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/admin/tech-tests/Game-of-Life/lib/game.rb": [
+        1,
+        null
+      ],
+      "/Users/admin/tech-tests/Game-of-Life/lib/grid.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/admin/tech-tests/Game-of-Life/lib/livecell.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1549132349
+  }
+}
