@@ -39,12 +39,22 @@ describe Grid do
       expect(@grid.nearestneighbournumber([0, 0])).to eq 2
     end
 
-    it 'returns 1 if 1 neighbour and one at same coordinate' do
+    it 'returns 1 if 1 neighbour and 1 live cell at same coordinate' do
       allow(livecell1).to receive(:coordinate) { [0, 0] }
       @grid.addlivecell(nil, nil, livecell1)
       allow(livecell2).to receive(:coordinate) { [0, 1] }
       @grid.addlivecell(nil, nil, livecell2)
       expect(@grid.nearestneighbournumber([0, 0])).to eq 1
+    end
+  end
+
+  describe '#extentnextgeneration' do
+    let(:livecell1) { double :livecell1 }
+
+    it 'returns correct extent for single live cell' do
+      allow(livecell1).to receive(:coordinate) { [0, 0] }
+      @grid.addlivecell(nil, nil, livecell1)
+      expect(@grid.extentnextgeneration).to include(max: [1, 1], min: [-1, -1])
     end
   end
 end
