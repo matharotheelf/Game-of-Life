@@ -28,11 +28,11 @@ class Grid
   end
 
   def islivecell?(_coordinate)
-    if !livecellsarray.empty?
-      livecellsarray[0].coordinate == _coordinate
-    else
-      false
+    islivecell = false
+    livecellsarray.each do |element|
+      islivecell = true if element.coordinate == _coordinate
     end
+    islivecell
   end
 
   private

@@ -91,12 +91,12 @@ describe Grid do
       expect(@grid.islivecell?([0, 1])).to eq false
     end
 
-    # it 'returns true if one of two live cells exists at coordinate' do
-    #   allow(livecell1).to receive(:coordinate) { [0, 0] }
-    #   @grid.addlivecell(nil, nil, livecell1)
-    #   allow(livecell2).to receive(:coordinate) { [0, 1] }
-    #   @grid.addlivecell(nil, nil, livecell2)
-    #   expect(@grid.islivecell?([0, 1])).to eq true
-    # end
+    it 'returns true if one of two live cells exists at coordinate' do
+      allow(livecell1).to receive(:coordinate) { [0, 0] }
+      @grid.addlivecell(nil, nil, livecell1)
+      allow(livecell2).to receive(:coordinate) { [0, 1] }
+      @grid.addlivecell(nil, nil, livecell2)
+      expect(@grid.islivecell?([0, 1])).to eq true
+    end
   end
 end
