@@ -17,8 +17,15 @@ describe Grid do
 
   describe '#nearestneighbournumber' do
     let(:livecell1) { double :livecell1 }
+    let(:livecell2) { double :livecell2 }
 
     it 'returns 0 if no nearest neighbours' do
+      expect(@grid.nearestneighbournumber([0, 0])).to eq 0
+    end
+
+    it 'returns 0 if no nearest neighbours but one further away' do
+      allow(livecell2).to receive(:coordinate) { [0, 2] }
+      @grid.addlivecell(nil, nil, livecell2)
       expect(@grid.nearestneighbournumber([0, 0])).to eq 0
     end
 
