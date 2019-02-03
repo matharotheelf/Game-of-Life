@@ -37,8 +37,8 @@ class Grid
 
   def livecellneighbournumberhash
     hash = {}
-    (extentnextgeneration[:min][0]...extentnextgeneration[:max][0] + 1).each do |x|
-      (extentnextgeneration[:min][1]...extentnextgeneration[:max][1] + 1).each do |y|
+    xextentrange.each do |x|
+      yextentrange.each do |y|
         hash[[x, y]] = [nearestneighbournumber([x, y]), islivecell?([x, y])]
       end
     end
@@ -46,6 +46,14 @@ class Grid
   end
 
   private
+
+  def xextentrange
+    extentnextgeneration[:min][0]...extentnextgeneration[:max][0] + 1
+  end
+
+  def yextentrange
+    extentnextgeneration[:min][1]...extentnextgeneration[:max][1] + 1
+  end
 
   def livecellarrayempty?
     livecellsarray.empty?
