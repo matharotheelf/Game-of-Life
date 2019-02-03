@@ -50,11 +50,20 @@ describe Grid do
 
   describe '#extentnextgeneration' do
     let(:livecell1) { double :livecell1 }
+    let(:livecell2) { double :livecell2 }
 
     it 'returns correct extent for single live cell' do
       allow(livecell1).to receive(:coordinate) { [0, 0] }
       @grid.addlivecell(nil, nil, livecell1)
       expect(@grid.extentnextgeneration).to include(max: [1, 1], min: [-1, -1])
+    end
+
+    it 'returns correct extent for multiple living cells' do
+      allow(livecell1).to receive(:coordinate) { [1, 0] }
+      @grid.addlivecell(nil, nil, livecell1)
+      allow(livecell2).to receive(:coordinate) { [0, 1] }
+      @grid.addlivecell(nil, nil, livecell2)
+      expect(@grid.extentnextgeneration).to include(max: [2, 2], min: [-1, -1])
     end
   end
 end

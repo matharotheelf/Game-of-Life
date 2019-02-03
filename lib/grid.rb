@@ -12,7 +12,13 @@ class Grid
   end
 
   def extentnextgeneration
-    { min: [livecellsarray[0].coordinate[0] - 1, livecellsarray[0].coordinate[1] - 1], max: [livecellsarray[0].coordinate[0] + 1, livecellsarray[0].coordinate[1] + 1] }
+    xcoordinates = []
+    ycoordinates = []
+    livecellsarray.each do |element|
+      xcoordinates.push(element.coordinate[0])
+      ycoordinates.push(element.coordinate[1])
+    end
+    { max: [xcoordinates.max + 1, ycoordinates.max + 1], min: [xcoordinates.min - 1, ycoordinates.min - 1] }
   end
 
   def nearestneighbournumber(_coordinate)
