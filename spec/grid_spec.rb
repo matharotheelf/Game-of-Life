@@ -1,7 +1,9 @@
 require 'grid'
 
 describe Grid do
-  grid = Grid.new
+  before do
+    @grid = Grid.new
+  end
 
   describe '#addlivecell' do
     let(:livecell) { double :livecell }
@@ -9,13 +11,21 @@ describe Grid do
     let(:ycoordinate) { double :ycoordinate }
 
     it 'can add cell to grid' do
-      expect { grid.addlivecell(xcoordinate, ycoordinate, livecell) }.to change { grid.livecellsarray.length }.by(1)
+      expect { @grid.addlivecell(xcoordinate, ycoordinate, livecell) }.to change { @grid.livecellsarray.length }.by(1)
     end
   end
 
   describe '#nearestneighbournumber' do
+    let(:livecell1) { double :livecell1 }
+
     it 'returns 0 if no nearest neighbours' do
-      expect(grid.nearestneighbournumber([0, 0])).to eq 0
+      expect(@grid.nearestneighbournumber([0, 0])).to eq 0
+    end
+
+    it 'returns 1 if 1 nearest neighbour' do
+      allow(livecell1).to receive(:coordinate) { [0, 1] }
+      @grid.addlivecell(nil, nil, livecell1)
+      expect(@grid.nearestneighbournumber([0, 0])).to eq 1
     end
   end
 end

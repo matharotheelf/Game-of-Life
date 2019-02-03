@@ -12,6 +12,10 @@ class Grid
   end
 
   def nearestneighbournumber(_coordinate)
-    0
+    if livecellsarray.empty?
+      0
+    else
+      1
+    end
   end
 end
