@@ -73,6 +73,7 @@ describe Grid do
 
   describe '#islivecell?' do
     let(:livecell1) { double :livecell1 }
+    let(:livecell2) { double :livecell2 }
 
     it 'reuturns false if not a live cell and no live cells' do
       expect(@grid.islivecell?([0, 0])).to eq false
@@ -83,5 +84,19 @@ describe Grid do
       @grid.addlivecell(nil, nil, livecell1)
       expect(@grid.islivecell?([0, 0])).to eq true
     end
+
+    it 'reuturns false if live cell exists but at different coordinate' do
+      allow(livecell1).to receive(:coordinate) { [0, 0] }
+      @grid.addlivecell(nil, nil, livecell1)
+      expect(@grid.islivecell?([0, 1])).to eq false
+    end
+
+    # it 'returns true if one of two live cells exists at coordinate' do
+    #   allow(livecell1).to receive(:coordinate) { [0, 0] }
+    #   @grid.addlivecell(nil, nil, livecell1)
+    #   allow(livecell2).to receive(:coordinate) { [0, 1] }
+    #   @grid.addlivecell(nil, nil, livecell2)
+    #   expect(@grid.islivecell?([0, 1])).to eq true
+    # end
   end
 end

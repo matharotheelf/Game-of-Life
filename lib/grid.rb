@@ -28,7 +28,11 @@ class Grid
   end
 
   def islivecell?(_coordinate)
-    !livecellsarray.empty?
+    if !livecellsarray.empty?
+      livecellsarray[0].coordinate == _coordinate
+    else
+      false
+    end
   end
 
   private
