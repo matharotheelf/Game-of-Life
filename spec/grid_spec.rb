@@ -99,4 +99,21 @@ describe Grid do
       expect(@grid.islivecell?([0, 1])).to eq true
     end
   end
+
+  describe '#livecellneighbournumberhash' do
+    let(:livecell1) { double :livecell1 }
+    it 'creates hash for single live cell' do
+      allow(livecell1).to receive(:coordinate) { [0, 0] }
+      @grid.addlivecell(nil, nil, livecell1)
+      expect(@grid.livecellneighbournumberhash).to include([0, 0] => [0, true],
+                                                           [0, 1] => [1, false],
+                                                           [0, -1] => [1, false],
+                                                           [-1, -1] => [1, false],
+                                                           [-1, 0] => [1, false],
+                                                           [-1, 1] => [1, false],
+                                                           [1, -1] => [1, false],
+                                                           [1, 0] => [1, false],
+                                                           [1, 1] => [1, false])
+    end
+  end
 end
