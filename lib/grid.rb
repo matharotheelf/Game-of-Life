@@ -15,7 +15,7 @@ class Grid
     neighbournumber = 0
     livecellsarray.each do |element|
       if (element.coordinate[0] - _coordinate[0]).between?(-1, 1) && (element.coordinate[1] - _coordinate[1]).between?(-1, 1)
-        neighbournumber = 1
+        neighbournumber += 1
       end
     end
     neighbournumber
