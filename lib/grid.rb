@@ -15,17 +15,21 @@ class Grid
     if livecellarrayempty?
       nil
     else
-      hash = {}
-      xextentrange.each do |x|
-        yextentrange.each do |y|
-          hash[[x, y]] = hashentry(x, y)
-        end
+      createhash
+    end
+  end
+
+  private
+
+  def createhash
+    hash = {}
+    xextentrange.each do |x|
+      yextentrange.each do |y|
+        hash[[x, y]] = hashentry(x, y)
       end
     end
     hash
   end
-
-  private
 
   def extentnextgeneration
     if livecellarrayempty?
