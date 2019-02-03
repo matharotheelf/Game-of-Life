@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-03T19:23:46+00:00">2019-02-03T19:23:46+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-03T19:54:44+00:00">2019-02-03T19:54:44+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         21.4
+         21.18
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>3</b> files in total.
-    <b>55</b> relevant lines. 
-    <span class="green"><b>55</b> lines covered</span> and
+    <b>56</b> relevant lines. 
+    <span class="green"><b>56</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#a647d9b6e2d3daa3ec2536df7d6e5cfcb2c3ae61" class="src_link" title="lib/grid.rb">lib/grid.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>85</td>
-        <td>49</td>
-        <td>49</td>
+        <td>89</td>
+        <td>50</td>
+        <td>50</td>
         <td>0</td>
-        <td>23.9</td>
+        <td>23.6</td>
       </tr>
       
       <tr>
@@ -278,15 +278,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         21.4
+         21.18
        </span>
     </span> hits/line)
   </h2>
   <a name="Libraries"></a>
   <div>
     <b>3</b> files in total.
-    <b>55</b> relevant lines. 
-    <span class="green"><b>55</b> lines covered</span> and
+    <b>56</b> relevant lines. 
+    <span class="green"><b>56</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -316,11 +316,11 @@
       <tr>
         <td class="strong"><a href="#a647d9b6e2d3daa3ec2536df7d6e5cfcb2c3ae61" class="src_link" title="lib/grid.rb">lib/grid.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>85</td>
-        <td>49</td>
-        <td>49</td>
+        <td>89</td>
+        <td>50</td>
+        <td>50</td>
         <td>0</td>
-        <td>23.9</td>
+        <td>23.6</td>
       </tr>
       
       <tr>
@@ -396,8 +396,8 @@
     <h3>lib/grid.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>49</b> relevant lines. 
-      <span class="green"><b>49</b> lines covered</span> and
+      <b>50</b> relevant lines. 
+      <span class="green"><b>50</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -441,8 +441,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="7">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="7">
+          <span class="hits">15</span>
           
           <code class="ruby">    @livecellsarray = []</code>
         </li>
@@ -633,88 +633,88 @@
           <code class="ruby">  def livecellneighbournumberhash</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="39">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="39">
+          <span class="hits">3</span>
           
-          <code class="ruby">    hash = {}</code>
+          <code class="ruby">    if livecellarrayempty?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="40">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="40">
           
-          <code class="ruby">    xextentrange.each do |x|</code>
+          
+          <code class="ruby">      nil</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="42">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      hash = {}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="43">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      xextentrange.each do |x|</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="44">
           <span class="hits">7</span>
           
-          <code class="ruby">      yextentrange.each do |y|</code>
+          <code class="ruby">        yextentrange.each do |y|</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="42">
+        <li class="covered" data-hits="25" data-linenumber="45">
           <span class="hits">25</span>
           
-          <code class="ruby">        hash[[x, y]] = [nearestneighbournumber([x, y]), islivecell?([x, y])]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="44">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="45">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    hash</code>
+          <code class="ruby">          hash[[x, y]] = [nearestneighbournumber([x, y]), islivecell?([x, y])]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="48">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="covered" data-hits="3" data-linenumber="49">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    hash</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def xextentrange</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="51">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    extentnextgeneration[:min][0]...extentnextgeneration[:max][0] + 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
@@ -726,13 +726,13 @@
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">  def yextentrange</code>
+          <code class="ruby">  def xextentrange</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="55">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="2" data-linenumber="55">
+          <span class="hits">2</span>
           
-          <code class="ruby">    extentnextgeneration[:min][1]...extentnextgeneration[:max][1] + 1</code>
+          <code class="ruby">    extentnextgeneration[:min][0]...extentnextgeneration[:max][0] + 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
@@ -750,13 +750,13 @@
         <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
-          <code class="ruby">  def livecellarrayempty?</code>
+          <code class="ruby">  def yextentrange</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="59">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="7" data-linenumber="59">
+          <span class="hits">7</span>
           
-          <code class="ruby">    livecellsarray.empty?</code>
+          <code class="ruby">    extentnextgeneration[:min][1]...extentnextgeneration[:max][1] + 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
@@ -774,13 +774,13 @@
         <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
-          <code class="ruby">  def maxextentcalculator</code>
+          <code class="ruby">  def livecellarrayempty?</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="63">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="24" data-linenumber="63">
+          <span class="hits">24</span>
           
-          <code class="ruby">    [coordinatearray[0].max + 1, coordinatearray[1].max + 1]</code>
+          <code class="ruby">    livecellsarray.empty?</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
@@ -798,13 +798,13 @@
         <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
-          <code class="ruby">  def minextentcalculator</code>
+          <code class="ruby">  def maxextentcalculator</code>
         </li>
       
         <li class="covered" data-hits="20" data-linenumber="67">
           <span class="hits">20</span>
           
-          <code class="ruby">    [coordinatearray[0].min - 1, coordinatearray[1].min - 1]</code>
+          <code class="ruby">    [coordinatearray[0].max + 1, coordinatearray[1].max + 1]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
@@ -822,94 +822,118 @@
         <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
-          <code class="ruby">  def coordinatearray</code>
+          <code class="ruby">  def minextentcalculator</code>
         </li>
       
-        <li class="covered" data-hits="80" data-linenumber="71">
-          <span class="hits">80</span>
+        <li class="covered" data-hits="20" data-linenumber="71">
+          <span class="hits">20</span>
           
-          <code class="ruby">    xcoordinates = []</code>
+          <code class="ruby">    [coordinatearray[0].min - 1, coordinatearray[1].min - 1]</code>
         </li>
       
-        <li class="covered" data-hits="80" data-linenumber="72">
-          <span class="hits">80</span>
-          
-          <code class="ruby">    ycoordinates = []</code>
-        </li>
-      
-        <li class="covered" data-hits="80" data-linenumber="73">
-          <span class="hits">80</span>
-          
-          <code class="ruby">    livecellsarray.each do |element|</code>
-        </li>
-      
-        <li class="covered" data-hits="124" data-linenumber="74">
-          <span class="hits">124</span>
-          
-          <code class="ruby">      xcoordinates.push(element.coordinate[0])</code>
-        </li>
-      
-        <li class="covered" data-hits="124" data-linenumber="75">
-          <span class="hits">124</span>
-          
-          <code class="ruby">      ycoordinates.push(element.coordinate[1])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="76">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="80" data-linenumber="77">
-          <span class="hits">80</span>
-          
-          <code class="ruby">    [xcoordinates, ycoordinates]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="72">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="73">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="80">
+        <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">  def isnexto?(_element, _coordinate)</code>
+          <code class="ruby">  def coordinatearray</code>
         </li>
       
-        <li class="covered" data-hits="47" data-linenumber="81">
-          <span class="hits">47</span>
+        <li class="covered" data-hits="80" data-linenumber="75">
+          <span class="hits">80</span>
           
-          <code class="ruby">    difx = _element.coordinate[0] - _coordinate[0]</code>
+          <code class="ruby">    xcoordinates = []</code>
         </li>
       
-        <li class="covered" data-hits="47" data-linenumber="82">
-          <span class="hits">47</span>
+        <li class="covered" data-hits="80" data-linenumber="76">
+          <span class="hits">80</span>
           
-          <code class="ruby">    dify = _element.coordinate[1] - _coordinate[1]</code>
+          <code class="ruby">    ycoordinates = []</code>
         </li>
       
-        <li class="covered" data-hits="47" data-linenumber="83">
-          <span class="hits">47</span>
+        <li class="covered" data-hits="80" data-linenumber="77">
+          <span class="hits">80</span>
           
-          <code class="ruby">    difx.between?(-1, 1) &amp;&amp; dify.between?(-1, 1) &amp;&amp; !(difx == 0 &amp;&amp; dify == 0)</code>
+          <code class="ruby">    livecellsarray.each do |element|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="covered" data-hits="124" data-linenumber="78">
+          <span class="hits">124</span>
+          
+          <code class="ruby">      xcoordinates.push(element.coordinate[0])</code>
+        </li>
+      
+        <li class="covered" data-hits="124" data-linenumber="79">
+          <span class="hits">124</span>
+          
+          <code class="ruby">      ycoordinates.push(element.coordinate[1])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="80" data-linenumber="81">
+          <span class="hits">80</span>
+          
+          <code class="ruby">    [xcoordinates, ycoordinates]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def isnexto?(_element, _coordinate)</code>
+        </li>
+      
+        <li class="covered" data-hits="47" data-linenumber="85">
+          <span class="hits">47</span>
+          
+          <code class="ruby">    difx = _element.coordinate[0] - _coordinate[0]</code>
+        </li>
+      
+        <li class="covered" data-hits="47" data-linenumber="86">
+          <span class="hits">47</span>
+          
+          <code class="ruby">    dify = _element.coordinate[1] - _coordinate[1]</code>
+        </li>
+      
+        <li class="covered" data-hits="47" data-linenumber="87">
+          <span class="hits">47</span>
+          
+          <code class="ruby">    difx.between?(-1, 1) &amp;&amp; dify.between?(-1, 1) &amp;&amp; !(difx == 0 &amp;&amp; dify == 0)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
           
           
           <code class="ruby">end</code>

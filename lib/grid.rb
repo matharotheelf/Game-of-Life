@@ -36,10 +36,14 @@ class Grid
   end
 
   def livecellneighbournumberhash
-    hash = {}
-    xextentrange.each do |x|
-      yextentrange.each do |y|
-        hash[[x, y]] = [nearestneighbournumber([x, y]), islivecell?([x, y])]
+    if livecellarrayempty?
+      nil
+    else
+      hash = {}
+      xextentrange.each do |x|
+        yextentrange.each do |y|
+          hash[[x, y]] = [nearestneighbournumber([x, y]), islivecell?([x, y])]
+        end
       end
     end
     hash
