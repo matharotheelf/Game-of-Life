@@ -72,8 +72,16 @@ describe Grid do
   end
 
   describe '#islivecell?' do
+    let(:livecell1) { double :livecell1 }
+
     it 'reuturns false if not a live cell and no live cells' do
       expect(@grid.islivecell?([0, 0])).to eq false
+    end
+
+    it 'reuturns true if live cell at same coordinate' do
+      allow(livecell1).to receive(:coordinate) { [0, 0] }
+      @grid.addlivecell(nil, nil, livecell1)
+      expect(@grid.islivecell?([0, 0])).to eq true
     end
   end
 end
