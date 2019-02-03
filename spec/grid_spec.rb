@@ -65,5 +65,9 @@ describe Grid do
       @grid.addlivecell(nil, nil, livecell2)
       expect(@grid.extentnextgeneration).to include(max: [2, 2], min: [-1, -1])
     end
+
+    it 'returns response if no living cells' do
+      expect(@grid.extentnextgeneration).to include(max: nil, min: nil)
+    end
   end
 end

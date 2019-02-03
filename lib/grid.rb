@@ -12,7 +12,11 @@ class Grid
   end
 
   def extentnextgeneration
-    { max: [coordinatearray[0].max + 1, coordinatearray[1].max + 1], min: [coordinatearray[0].min - 1, coordinatearray[1].min - 1] }
+    if livecellsarray.empty?
+      { max: nil, min: nil }
+    else
+      { max: [coordinatearray[0].max + 1, coordinatearray[1].max + 1], min: [coordinatearray[0].min - 1, coordinatearray[1].min - 1] }
+    end
   end
 
   def nearestneighbournumber(_coordinate)
