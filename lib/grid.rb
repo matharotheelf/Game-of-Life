@@ -15,7 +15,7 @@ class Grid
     if livecellsarray.empty?
       { max: nil, min: nil }
     else
-      { max: [coordinatearray[0].max + 1, coordinatearray[1].max + 1], min: [coordinatearray[0].min - 1, coordinatearray[1].min - 1] }
+      { max: maxextentcalculator, min: minextentcalculator }
     end
   end
 
@@ -28,6 +28,14 @@ class Grid
   end
 
   private
+
+  def maxextentcalculator
+    [coordinatearray[0].max + 1, coordinatearray[1].max + 1]
+  end
+
+  def minextentcalculator
+    [coordinatearray[0].min - 1, coordinatearray[1].min - 1]
+  end
 
   def coordinatearray
     xcoordinates = []
