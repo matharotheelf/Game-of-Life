@@ -42,7 +42,7 @@ class Grid
       hash = {}
       xextentrange.each do |x|
         yextentrange.each do |y|
-          hash[[x, y]] = [nearestneighbournumber([x, y]), islivecell?([x, y])]
+          hash[[x, y]] = hashentry(x, y)
         end
       end
     end
@@ -50,6 +50,10 @@ class Grid
   end
 
   private
+
+  def hashentry(x, y)
+    [nearestneighbournumber([x, y]), islivecell?([x, y])]
+  end
 
   def xextentrange
     extentnextgeneration[:min][0]...extentnextgeneration[:max][0] + 1
