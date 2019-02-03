@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-03T01:11:51+00:00">2019-02-03T01:11:51+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-03T01:22:07+00:00">2019-02-03T01:22:07+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.16
+         2.44
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>13</td>
         <td>13</td>
         <td>0</td>
-        <td>2.7</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -278,7 +278,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.16
+         2.44
        </span>
     </span> hits/line)
   </h2>
@@ -320,7 +320,7 @@
         <td>13</td>
         <td>13</td>
         <td>0</td>
-        <td>2.7</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -465,8 +465,8 @@
           <code class="ruby">  def addlivecell(x, y, livecell = Livecell.new(x, y))</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="11">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="11">
+          <span class="hits">7</span>
           
           <code class="ruby">    @livecellsarray.push(livecell)</code>
         </li>
@@ -501,14 +501,14 @@
           <code class="ruby">    livecellsarray.each do |element|</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="17">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="17">
+          <span class="hits">6</span>
           
-          <code class="ruby">      if (element.coordinate[0] - _coordinate[0]).between?(-1, 1) &amp;&amp; (element.coordinate[1] - _coordinate[1]).between?(-1, 1)</code>
+          <code class="ruby">      if (element.coordinate[0] - _coordinate[0]).between?(-1, 1) &amp;&amp; (element.coordinate[1] - _coordinate[1]).between?(-1, 1) &amp;&amp; !((element.coordinate[0] - _coordinate[0]) == 0 &amp;&amp; (element.coordinate[1] - _coordinate[1]) == 0)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="18">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="18">
+          <span class="hits">4</span>
           
           <code class="ruby">        neighbournumber += 1</code>
         </li>
