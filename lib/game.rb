@@ -2,10 +2,10 @@ require_relative 'grid.rb'
 
 class Game
   def nextiterationlivecell?(_celldetails)
-    _celldetails[0] == if _celldetails[1]
-                         2
-                       else
-                         3
-                       end
+    if _celldetails[1]
+      _celldetails[0] == 2 || _celldetails[0] == 3
+    else
+      _celldetails[0] == 3
+    end
   end
 end
