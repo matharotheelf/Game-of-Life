@@ -11,6 +11,22 @@ class Grid
     @livecellsarray.push(livecell)
   end
 
+  def livecellneighbournumberhash
+    if livecellarrayempty?
+      nil
+    else
+      hash = {}
+      xextentrange.each do |x|
+        yextentrange.each do |y|
+          hash[[x, y]] = hashentry(x, y)
+        end
+      end
+    end
+    hash
+  end
+
+  private
+
   def extentnextgeneration
     if livecellarrayempty?
       { max: nil, min: nil }
@@ -34,22 +50,6 @@ class Grid
     end
     islivecell
   end
-
-  def livecellneighbournumberhash
-    if livecellarrayempty?
-      nil
-    else
-      hash = {}
-      xextentrange.each do |x|
-        yextentrange.each do |y|
-          hash[[x, y]] = hashentry(x, y)
-        end
-      end
-    end
-    hash
-  end
-
-  private
 
   def hashentry(x, y)
     [nearestneighbournumber([x, y]), islivecell?([x, y])]
