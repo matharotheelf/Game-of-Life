@@ -12,7 +12,7 @@ class Grid
   end
 
   def extentnextgeneration
-    if livecellsarray.empty?
+    if livecellarrayempty?
       { max: nil, min: nil }
     else
       { max: maxextentcalculator, min: minextentcalculator }
@@ -36,6 +36,10 @@ class Grid
   end
 
   private
+
+  def livecellarrayempty?
+    livecellsarray.empty?
+  end
 
   def maxextentcalculator
     [coordinatearray[0].max + 1, coordinatearray[1].max + 1]
