@@ -17,5 +17,9 @@ describe Game do
     it 'returns true if live cell and two neighbours' do
       expect(@game.nextiterationlivecell?([2, true])).to eq(true)
     end
+
+    it 'returns false if live cell and one neighbours' do
+      expect(@game.nextiterationlivecell?([1, true])).to eq(false)
+    end
   end
 end
