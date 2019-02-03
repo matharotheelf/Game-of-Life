@@ -27,6 +27,10 @@ class Grid
     neighbournumber
   end
 
+  def islivecell?(_coordinate)
+    false
+  end
+
   private
 
   def maxextentcalculator

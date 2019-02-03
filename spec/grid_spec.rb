@@ -70,4 +70,10 @@ describe Grid do
       expect(@grid.extentnextgeneration).to include(max: nil, min: nil)
     end
   end
+
+  describe '#islivecell?' do
+    it 'reuturns false if not a live cell and no live cells' do
+      expect(@grid.islivecell?([0, 0])).to eq false
+    end
+  end
 end
