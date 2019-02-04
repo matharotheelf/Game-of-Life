@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-04T00:43:31+00:00">2019-02-04T00:43:31+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-04T01:08:12+00:00">2019-02-04T01:08:12+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         15.08
+         15.77
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>4.9</td>
+        <td>7.7</td>
       </tr>
       
       <tr>
@@ -278,7 +278,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         15.08
+         15.77
        </span>
     </span> hits/line)
   </h2>
@@ -310,7 +310,7 @@
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>4.9</td>
+        <td>7.7</td>
       </tr>
       
       <tr>
@@ -383,85 +383,85 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  def nextiterationlivecell?(_celldetails)</code>
+          <code class="ruby">  def iterate(gridbefore, gridafter = Grid.new)</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="5">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="4" data-linenumber="5">
+          <span class="hits">4</span>
           
-          <code class="ruby">    if _celldetails[1]</code>
+          <code class="ruby">    addtogrid(gridbefore, gridafter) unless isgridnil?(gridbefore)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="6">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
-          <code class="ruby">      nextiterationiflivecell?(_celldetails[0])</code>
+          <code class="ruby">    gridafter</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="8">
-          <span class="hits">14</span>
+        <li class="never" data-hits="" data-linenumber="8">
           
-          <code class="ruby">      nextiterationifnotlivecell?(_celldetails[0])</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">  private</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">  def iterate(gridbefore, gridafter = Grid.new)</code>
+          <code class="ruby">  def nextiterationlivecell?(_celldetails)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="13">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="31" data-linenumber="12">
+          <span class="hits">31</span>
           
-          <code class="ruby">    addtogrid(gridbefore, gridafter) unless isgridnil?(gridbefore)</code>
+          <code class="ruby">    if _celldetails[1]</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="14">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="7" data-linenumber="13">
+          <span class="hits">7</span>
           
-          <code class="ruby">    gridafter</code>
+          <code class="ruby">      nextiterationiflivecell?(_celldetails[0])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="15">
+          <span class="hits">24</span>
+          
+          <code class="ruby">      nextiterationifnotlivecell?(_celldetails[0])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="17">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -476,14 +476,14 @@
           <code class="ruby">  def addtogrid(_gridbefore, _gridafter)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
           <code class="ruby">    _gridbefore.livecellneighbournumberhash.each do |key, array|</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="21">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="31" data-linenumber="21">
+          <span class="hits">31</span>
           
           <code class="ruby">      _gridafter.addlivecell(key[0], key[1]) if nextiterationlivecell?(array)</code>
         </li>
@@ -512,8 +512,8 @@
           <code class="ruby">  def isgridnil?(_grid)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="26">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="26">
+          <span class="hits">4</span>
           
           <code class="ruby">    _grid.livecellneighbournumberhash.nil?</code>
         </li>
@@ -536,8 +536,8 @@
           <code class="ruby">  def nextiterationiflivecell?(_neighbournumber)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="30">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="30">
+          <span class="hits">7</span>
           
           <code class="ruby">    _neighbournumber == 2 || _neighbournumber == 3</code>
         </li>
@@ -560,8 +560,8 @@
           <code class="ruby">  def nextiterationifnotlivecell?(_neighbournumber)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="34">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="24" data-linenumber="34">
+          <span class="hits">24</span>
           
           <code class="ruby">    _neighbournumber == 3</code>
         </li>

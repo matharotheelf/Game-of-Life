@@ -1,6 +1,13 @@
 require_relative 'grid.rb'
 
 class Game
+  def iterate(gridbefore, gridafter = Grid.new)
+    addtogrid(gridbefore, gridafter) unless isgridnil?(gridbefore)
+    gridafter
+  end
+
+  private
+
   def nextiterationlivecell?(_celldetails)
     if _celldetails[1]
       nextiterationiflivecell?(_celldetails[0])
@@ -8,13 +15,6 @@ class Game
       nextiterationifnotlivecell?(_celldetails[0])
     end
   end
-
-  def iterate(gridbefore, gridafter = Grid.new)
-    addtogrid(gridbefore, gridafter) unless isgridnil?(gridbefore)
-    gridafter
-  end
-
-  private
 
   def addtogrid(_gridbefore, _gridafter)
     _gridbefore.livecellneighbournumberhash.each do |key, array|
