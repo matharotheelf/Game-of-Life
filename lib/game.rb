@@ -1,36 +1,36 @@
 require_relative 'grid.rb'
 
 class Game
-  def iterate(gridbefore, gridafter = Grid.new)
-    addtogrid(gridbefore, gridafter) unless isgridnil?(gridbefore)
-    gridafter
+  def iterate(grid_before, grid_after = Grid.new)
+    add_to_grid(grid_before, grid_after) unless is_grid_nil?(grid_before)
+    grid_after
   end
 
   private
 
-  def nextiterationlivecell?(_celldetails)
-    if _celldetails[1]
-      nextiterationiflivecell?(_celldetails[0])
+  def next_iteration_livecell?(_cell_details)
+    if _cell_details[1]
+      next_iteration_if_livecell?(_cell_details[0])
     else
-      nextiterationifnotlivecell?(_celldetails[0])
+      next_iteration_if_not_livecell?(_cell_details[0])
     end
   end
 
-  def addtogrid(_gridbefore, _gridafter)
-    _gridbefore.livecellneighbournumberhash.each do |key, array|
-      _gridafter.addlivecell(key[0], key[1]) if nextiterationlivecell?(array)
+  def add_to_grid(_grid_before, _grid_after)
+    _grid_before.livecell_neighbour_number_hash.each do |key, array|
+      _grid_after.add_livecell(key[0], key[1]) if next_iteration_livecell?(array)
     end
   end
 
-  def isgridnil?(_grid)
-    _grid.livecellneighbournumberhash.nil?
+  def is_grid_nil?(_grid)
+    _grid.livecell_neighbour_number_hash.nil?
   end
 
-  def nextiterationiflivecell?(_neighbournumber)
-    _neighbournumber == 2 || _neighbournumber == 3
+  def next_iteration_if_livecell?(_neighbour_number)
+    _neighbour_number == 2 || _neighbour_number == 3
   end
 
-  def nextiterationifnotlivecell?(_neighbournumber)
-    _neighbournumber == 3
+  def next_iteration_if_not_livecell?(_neighbour_number)
+    _neighbour_number == 3
   end
 end
