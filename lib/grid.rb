@@ -8,7 +8,7 @@ class Grid
   end
 
   def addlivecell(x, y, livecell = Livecell.new(x, y))
-    @livecellsarray.push(livecell) unless islivecell?(livecell.coordinate)
+    addtolivecellsarray(livecell) unless islivecell?(livecell.coordinate)
   end
 
   def livecellneighbournumberhash
@@ -20,6 +20,10 @@ class Grid
   end
 
   private
+
+  def addtolivecellsarray(livecell)
+    @livecellsarray.push(livecell)
+  end
 
   def createhash
     hash = {}
