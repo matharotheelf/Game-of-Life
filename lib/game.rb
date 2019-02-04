@@ -10,7 +10,7 @@ class Game
   end
 
   def iterate(gridbefore, gridafter = Grid.new)
-    unless gridbefore.livecellneighbournumberhash.nil?
+    unless isgridnil?(gridbefore)
       gridbefore.livecellneighbournumberhash.each do |key, array|
         gridafter.addlivecell(key[0], key[1]) if nextiterationlivecell?(array)
       end
@@ -19,11 +19,15 @@ class Game
 
   private
 
-  def nextiterationiflivecell?(neighbournumber)
-    neighbournumber == 2 || neighbournumber == 3
+  def isgridnil?(_grid)
+    _grid.livecellneighbournumberhash.nil?
   end
 
-  def nextiterationifnotlivecell?(neighbournumber)
-    neighbournumber == 3
+  def nextiterationiflivecell?(_neighbournumber)
+    _neighbournumber == 2 || _neighbournumber == 3
+  end
+
+  def nextiterationifnotlivecell?(_neighbournumber)
+    _neighbournumber == 3
   end
 end
