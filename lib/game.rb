@@ -10,14 +10,16 @@ class Game
   end
 
   def iterate(gridbefore, gridafter = Grid.new)
-    unless isgridnil?(gridbefore)
-      gridbefore.livecellneighbournumberhash.each do |key, array|
-        gridafter.addlivecell(key[0], key[1]) if nextiterationlivecell?(array)
-      end
-    end
+    addtogrid(gridbefore, gridafter) unless isgridnil?(gridbefore)
   end
 
   private
+
+  def addtogrid(gridbefore, gridafter)
+    gridbefore.livecellneighbournumberhash.each do |key, array|
+      gridafter.addlivecell(key[0], key[1]) if nextiterationlivecell?(array)
+    end
+  end
 
   def isgridnil?(_grid)
     _grid.livecellneighbournumberhash.nil?
