@@ -7,11 +7,16 @@ describe Grid do
 
   describe '#addlivecell' do
     let(:livecell) { double :livecell }
-    let(:xcoordinate) { double :xcoordinate }
-    let(:ycoordinate) { double :ycoordinate }
 
     it 'can add cell to grid' do
-      expect { @grid.addlivecell(xcoordinate, ycoordinate, livecell) }.to change { @grid.livecellsarray.length }.by(1)
+      allow(livecell).to receive(:coordinate) { [0, 0] }
+      expect { @grid.addlivecell(nil, nil, livecell) }.to change { @grid.livecellsarray.length }.by(1)
+    end
+
+    it 'will not add live cell to list if one exists at coordinate' do
+      allow(livecell).to receive(:coordinate) { [0, 0] }
+      @grid.addlivecell(nil, nil, livecell)
+      expect { @grid.addlivecell(nil, nil, livecell) }.to change { @grid.livecellsarray.length }.by(0)
     end
   end
 
