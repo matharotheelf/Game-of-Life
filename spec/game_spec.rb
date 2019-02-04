@@ -61,5 +61,14 @@ describe Game do
       @game.iterate(gridbefore, gridafter)
       expect(gridafter).to have_received(:addlivecell).exactly(0).times
     end
+
+    context 'testing to see if newly created grid returned' do
+      let(:gridafter) { double :gridafter }
+
+      it 'reuturns newly created grid' do
+        allow(gridbefore).to receive(:livecellneighbournumberhash) { nil }
+        expect(@game.iterate(gridbefore, gridafter)).to eq(gridafter)
+      end
+    end
   end
 end
