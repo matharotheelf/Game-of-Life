@@ -54,5 +54,12 @@ describe Game do
       expect(gridafter).to have_received(:addlivecell).with(0, 1)
       expect(gridafter).to have_received(:addlivecell).with(0, -1)
     end
+
+    it 'Generates empty grid next iteration if empty' do
+      gridafter = spy('gridafter')
+      allow(gridbefore).to receive(:livecellneighbournumberhash) { nil }
+      @game.iterate(gridbefore, gridafter)
+      expect(gridafter).to have_received(:addlivecell).exactly(0).times
+    end
   end
 end

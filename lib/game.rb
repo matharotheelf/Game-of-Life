@@ -10,8 +10,10 @@ class Game
   end
 
   def iterate(gridbefore, gridafter = Grid.new)
-    gridbefore.livecellneighbournumberhash.each do |key, array|
-      gridafter.addlivecell(key[0], key[1]) if nextiterationlivecell?(array)
+    unless gridbefore.livecellneighbournumberhash.nil?
+      gridbefore.livecellneighbournumberhash.each do |key, array|
+        gridafter.addlivecell(key[0], key[1]) if nextiterationlivecell?(array)
+      end
     end
   end
 

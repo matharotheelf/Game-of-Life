@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-04T00:12:10+00:00">2019-02-04T00:12:10+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-04T00:27:00+00:00">2019-02-04T00:27:00+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.61%</span></span>
+    (<span class="covered_percent"><span class="green">98.63%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         15.98
+         15.8
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>3</b> files in total.
-    <b>72</b> relevant lines. 
-    <span class="green"><b>71</b> lines covered</span> and
+    <b>73</b> relevant lines. 
+    <span class="green"><b>72</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#6b97c5abda7cf9478b36dee5edabddf516fd9086" class="src_link" title="lib/game.rb">lib/game.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>27</td>
-        <td>14</td>
-        <td>14</td>
+        <td>29</td>
+        <td>15</td>
+        <td>15</td>
         <td>0</td>
-        <td>5.9</td>
+        <td>5.7</td>
       </tr>
       
       <tr>
@@ -274,19 +274,19 @@
           <div class="file_list_container" id="Libraries">
   <h2>
     <span class="group_name">Libraries</span>
-    (<span class="covered_percent"><span class="green">98.61%</span></span>
+    (<span class="covered_percent"><span class="green">98.63%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         15.98
+         15.8
        </span>
     </span> hits/line)
   </h2>
   <a name="Libraries"></a>
   <div>
     <b>3</b> files in total.
-    <b>72</b> relevant lines. 
-    <span class="green"><b>71</b> lines covered</span> and
+    <b>73</b> relevant lines. 
+    <span class="green"><b>72</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -306,11 +306,11 @@
       <tr>
         <td class="strong"><a href="#6b97c5abda7cf9478b36dee5edabddf516fd9086" class="src_link" title="lib/game.rb">lib/game.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>27</td>
-        <td>14</td>
-        <td>14</td>
+        <td>29</td>
+        <td>15</td>
+        <td>15</td>
         <td>0</td>
-        <td>5.9</td>
+        <td>5.7</td>
       </tr>
       
       <tr>
@@ -353,8 +353,8 @@
     <h3>lib/game.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -434,40 +434,40 @@
           <code class="ruby">  def iterate(gridbefore, gridafter = Grid.new)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    unless gridbefore.livecellneighbournumberhash.nil?</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    gridbefore.livecellneighbournumberhash.each do |key, array|</code>
+          <code class="ruby">      gridbefore.livecellneighbournumberhash.each do |key, array|</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="14">
+        <li class="covered" data-hits="15" data-linenumber="15">
           <span class="hits">15</span>
           
-          <code class="ruby">      gridafter.addlivecell(key[0], key[1]) if nextiterationlivecell?(array)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">        gridafter.addlivecell(key[0], key[1]) if nextiterationlivecell?(array)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="18">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
@@ -479,46 +479,58 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">  def nextiterationiflivecell?(neighbournumber)</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="21">
-          <span class="hits">6</span>
-          
-          <code class="ruby">    neighbournumber == 2 || neighbournumber == 3</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">  def nextiterationifnotlivecell?(neighbournumber)</code>
+          <code class="ruby">  def nextiterationiflivecell?(neighbournumber)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="25">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="6" data-linenumber="23">
+          <span class="hits">6</span>
           
-          <code class="ruby">    neighbournumber == 3</code>
+          <code class="ruby">    neighbournumber == 2 || neighbournumber == 3</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def nextiterationifnotlivecell?(neighbournumber)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="27">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    neighbournumber == 3</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>
