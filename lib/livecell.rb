@@ -1,7 +1,8 @@
+# class which generates and stores livecells and their coordinates
 class Livecell
   attr_reader :coordinate
 
-  def initialize(x, y)
-    @coordinate = [x, y]
+  def initialize(xcoordinate, ycoordinate)
+    @coordinate = [xcoordinate, ycoordinate]
   end
 end

@@ -1,5 +1,6 @@
 require_relative 'livecell.rb'
 
+# class that stores and computes the information of a grid of life cells
 class Grid
   attr_reader :livecells_array
 
@@ -7,8 +8,8 @@ class Grid
     @livecells_array = []
   end
 
-  def add_livecell(x, y, livecell = Livecell.new(x, y))
-    add_to_livecells_array(livecell) unless is_livecell?(livecell.coordinate)
+  def add_livecell(xcoord, ycoord, livecell = Livecell.new(xcoord, ycoord))
+    add_to_livecells_array(livecell) unless livecell?(livecell.coordinate)
   end
 
   def livecell_neighbour_number_hash
@@ -43,24 +44,24 @@ class Grid
     end
   end
 
-  def nearest_neighbour_number(_coordinate)
+  def nearest_neighbour_number(coordinate)
     neighbour_number = 0
     livecells_array.each do |element|
-      neighbour_number += 1 if is_next_to?(element, _coordinate)
+      neighbour_number += 1 if next_to?(element, coordinate)
     end
     neighbour_number
   end
 
-  def is_livecell?(_coordinate)
-    is_livecell = false
+  def livecell?(coordinate)
+    livecell = false
     livecells_array.each do |element|
-      is_livecell = true if element.coordinate == _coordinate
+      livecell = true if element.coordinate == coordinate
     end
-    is_livecell
+    livecell
   end
 
-  def hash_entry(x, y)
-    [nearest_neighbour_number([x, y]), is_livecell?([x, y])]
+  def hash_entry(xcoord, ycoord)
+    [nearest_neighbour_number([xcoord, ycoord]), livecell?([xcoord, ycoord])]
   end
 
   def x_extent_range
@@ -93,9 +94,9 @@ class Grid
     [x_coordinates, y_coordinates]
   end
 
-  def is_next_to?(_element, _coordinate)
-    difx = _element.coordinate[0] - _coordinate[0]
-    dify = _element.coordinate[1] - _coordinate[1]
-    difx.between?(-1, 1) && dify.between?(-1, 1) && !(difx == 0 && dify == 0)
+  def next_to?(element, coordinate)
+    difx = element.coordinate[0] - coordinate[0]
+    dify = element.coordinate[1] - coordinate[1]
+    difx.between?(-1, 1) && dify.between?(-1, 1) && !(difx.zero? && dify.zero?)
   end
 end

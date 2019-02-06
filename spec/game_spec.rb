@@ -33,7 +33,7 @@ describe Game do
       expect(grid_after).to have_received(:add_livecell).with(0, -1)
     end
 
-    it 'returns correct next iteration if seeded with array testing if livecell surrounded by three others stays alive' do
+    it 'calculates correctly if livecell is surrounded by three others' do
       grid_after = spy('grid_after')
       allow(grid_before).to receive(:livecell_neighbour_number_hash) {
                               { [-1, -1] => [1, false],
