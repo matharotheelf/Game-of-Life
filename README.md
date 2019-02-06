@@ -76,7 +76,7 @@ To run the software you must have installed Ruby version 2.5.1p57 and to run the
 
 ### Installing
 
-If you have installed bundler (https://bundler.io) you can quickly insall all the gems used in this project. To install the gems run "bundle install" in the command line.
+If you have installed bundler (https://bundler.io) you can quickly install all the gems used in this project. To install the gems run "bundle install" in the command line.
 
 ## Running the tests
 
@@ -91,7 +91,7 @@ To run the tests run "rspec" in the command line. The tests cover all the featur
 
 * **Thomas Lawrence**
 
-Challenged create by BBC
+Challenged created by BBC
 
 ## License
 
