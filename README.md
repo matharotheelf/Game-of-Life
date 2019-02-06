@@ -2,15 +2,30 @@
 
 This is a repository for the Game of Life technical test. The test models an infinite two-dimensional grid inhabited by "cells". Every cell interacts with its eight neighbours, which are the cells horizontally, vertically or diagonally adjacent. After each iteration livecells are born or killed depending on a set of rules. These rules can be described by the following set of scenarios: 
 
-Scenario 0: No interactions Given a game of life When there are no live cells Then on the next step there are still no live cells
+Scenario 0: No interactions
+Given a game of life 
+When there are no live cells 
+Then on the next step there are still no live cells
 
-Scenario 1: Underpopulation Given a game of life When a live cell has fewer than two neighbours Then this cell dies
+Scenario 1: Underpopulation 
+Given a game of life 
+When a live cell has fewer than two neighbours 
+Then this cell dies
 
-Scenario 2: Overcrowding Given a game of life When a live cell has more than three neighbours Then this cell dies
+Scenario 2: Overcrowding 
+Given a game of life 
+When a live cell has more than three neighbours 
+Then this cell dies
 
-Scenario 3: Survival Given a game of life When a live cell has two or three neighbours Then this cell stays alive
+Scenario 3: Survival 
+Given a game of life 
+When a live cell has two or three neighbours 
+Then this cell stays alive
 
-Scenario 4: Creation of Life Given a game of life When an empty position has exactly three neighbouring cells Then a cell is created in this position
+Scenario 4: Creation of Life 
+Given a game of life 
+When an empty position has exactly three neighbouring cells 
+Then a cell is created in this position
 
 ## Getting Started
 
