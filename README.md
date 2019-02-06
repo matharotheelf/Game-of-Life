@@ -59,7 +59,7 @@ grid.add_livecell(xcoordinate, ycoordinate)
 
 Where "xcoordinate" and "ycoordinate" are the coordinates of the newly seeded livecell in the grid.
 
-Then to find the next iteration's grid you must run on the game object with the current grid as a parameter:
+Then to find the next iteration's grid you must run "iterate" the game object with the current grid as a parameter:
 
 newgrid = game.iterate(grid)
 
