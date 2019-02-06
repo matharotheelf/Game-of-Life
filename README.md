@@ -34,7 +34,7 @@ newgrid = game.iterate(grid)
 
 This command returns the newly created grid so remember to save it to a variable. Then, to discover the positions of livecells in the new grid you can run:
 
-grid.livecells_array[i].coordinate
+newgrid.livecells_array[i].coordinate
 
 Where i is the position of the livecell in the array storing the livecells.
 
